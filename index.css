@@ -21,6 +21,12 @@ p.text {
   text-indent: 28px;
 }
 
+.adress {
+  /* color: #111; */
+  font-size: 13px;
+
+}
+
 p.text-no-indent {
   line-height: 150%;
   line-height: 200%;
