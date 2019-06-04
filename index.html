@@ -19,7 +19,11 @@
     <p class="text">
       尊敬的各位专家、教授、同道
       在这春暖花开的美好季节,由四川舞鸿医疗器械有限公司主办的:中医适宜技术临学术交流拟定于2019年5月25日在成都大鼎纪大酒店举行。届时将有国内一流的传统中
-      埋线专家亲临授课,并进行现场埋线及讨论一同分享课程盛宴时间:2019年5月25日13:30周六
+      埋线专家亲临授课,并进行现场埋线及讨论一同分享
+    </p>
+
+    <p class="text">
+      课程盛宴时间:2019年5月25日13:30周六
       地点:成都大鼎世纪大酒店
       成都市天仁南街298号
       我们诚挚邀请各位同道莅临此次会议
@@ -364,14 +368,15 @@
       <p class="text-no-indent">
         <span class="small-title">【适应症】</span>
         <p class="text">
-        微创埋线的适用范围非常广泛，凡是针灸的适应症大部分都可用本法治疗。如颈腰椎疾病、神经痛、痹证、
-        中风、面瘫、三叉神经痛、痿证、扭挫伤、面瘫、头痛、眩晕、失眠、心悸、心痛、高血压、感冒、咳嗽、哮喘、支气管炎、胃痛、胃炎、胃溃疡、结肠炎、腹痛、泄泻、乳痈、肠痈、风疹、痤疮、银屑病、目赤肿痛、咽喉肿痛、中耳炎、鼻炎、痛经、不孕症、月经不调、崩漏带下、小儿麻痹后遗症、单纯性肥胖、甲亢等。
-      </p>
+          微创埋线的适用范围非常广泛，凡是针灸的适应症大部分都可用本法治疗。如颈腰椎疾病、神经痛、痹证、
+          中风、面瘫、三叉神经痛、痿证、扭挫伤、面瘫、头痛、眩晕、失眠、心悸、心痛、高血压、感冒、咳嗽、哮喘、支气管炎、胃痛、胃炎、胃溃疡、结肠炎、腹痛、泄泻、乳痈、肠痈、风疹、痤疮、银屑病、目赤肿痛、咽喉肿痛、中耳炎、鼻炎、痛经、不孕症、月经不调、崩漏带下、小儿麻痹后遗症、单纯性肥胖、甲亢等。
+        </p>
         <span class="small-title">【禁忌症】</span>
         <p class="text">
-        全身发热或感染，各种严重性疾病、过敏性体质、肝肾功能不全及传染病患者；明显的出凝血时间延长或血小板减少、血友病及出血倾向；严重糖尿病、心脏器质或功能疾病；严重精神疾病或不合作病人；剧烈运动、酒后、过饱和过饥患者；严重水肿患者。
-      </p>
-      <p> <img src="./img/23.png" /></p>
+          全身发热或感染，各种严重性疾病、过敏性体质、肝肾功能不全及传染病患者；明显的出凝血时间延长或血小板减少、血友病及出血倾向；严重糖尿病、心脏器质或功能疾病；严重精神疾病或不合作病人；剧烈运动、酒后、过饱和过饥患者；严重水肿患者。
+        </p>
+
+        <!-- <p> <img src="./img/23.png" /></p>
       <p> <img src="./img/24.png" /></p>
       <p> <img src="./img/25.png" /></p>
       <p> <img src="./img/26.png" /></p>
@@ -384,15 +389,58 @@
       <p><img src="./img/33.png" /></p>
       <p> <img src="./img/34.png" /></p>
       <p><img src="./img/35.png" /></p>
-      <p><img src="./img/36.png" /></p>
-        
-       
-        
-        
+      <p><img src="./img/36.png" /></p> -->
+        <video id="myVideo" controls preload="auto" width=300 height="165"
+          src="./video/medicine.mp4">
+        </video>
+
+
+
 
 
       </p>
     </div>
+
+    <script>
+      var myVideo = document.getElementById('myVideo')//获取video元素
+        , tol = 0 //总时长
+        ;
+      myVideo.addEventListener("loadedmetadata", function () {
+        tol = myVideo.duration;//获取总时长
+      });
+
+      //播放
+      function play() {
+        myVideo.play();
+      }
+
+      //暂停
+      function pause() {
+        myVideo.pause();
+      }
+
+      //播放时间点更新时
+      myVideo.addEventListener("timeupdate", function () {
+        var currentTime = myVideo.currentTime;//获取当前播放时间
+        console.log(currentTime);//在调试器中打印
+      });
+
+      //设置播放点
+      function playBySeconds(num) {
+        myVideo.currentTime = num;
+      }
+
+      //音量改变时
+      myVideo.addEventListener("volumechange", function () {
+        var volume = myVideo.volume;//获取当前音量
+        console.log(volume);//在调试器中打印
+      });
+
+      //设置音量
+      function setVol(num) {
+        myVideo.volume = num;
+      }
+    </script>
 
 </body>
 
